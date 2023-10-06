@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yhq.bishe.mapper.BookingMapper">
+
+    <resultMap id="BaseResultMap" type="com.yhq.bishe.model.domain.Booking">
+            <id property="bookingId" column="bookingId" jdbcType="BIGINT"/>
+            <result property="bookingStatus" column="bookingStatus" jdbcType="INTEGER"/>
+            <result property="type" column="type" jdbcType="TINYINT"/>
+            <result property="fee" column="fee" jdbcType="DECIMAL"/>
+            <result property="placeId" column="placeId" jdbcType="BIGINT"/>
+            <result property="userId" column="userId" jdbcType="BIGINT"/>
+            <result property="beginTime" column="beginTime" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="endTime" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="sport" column="sport" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        bookingId,bookingStatus,type,
+        fee,placeId,userId,
+        beginTime,endTime,createTime,
+        updateTime,isDelete,sport
+    </sql>
+</mapper>

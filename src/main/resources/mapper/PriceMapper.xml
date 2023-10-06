@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yhq.bishe.mapper.PriceMapper">
+
+    <resultMap id="BaseResultMap" type="com.yhq.bishe.model.domain.Price">
+            <id property="priceId" column="priceId" jdbcType="BIGINT"/>
+            <result property="placeId" column="placeId" jdbcType="BIGINT"/>
+            <result property="sport" column="sport" jdbcType="VARCHAR"/>
+            <result property="type" column="type" jdbcType="TINYINT"/>
+            <result property="beginTime" column="beginTime" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="endTime" jdbcType="TIMESTAMP"/>
+            <result property="unitPrice" column="unitPrice" jdbcType="DECIMAL"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="courtName" column="courtName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        priceId,placeId,sport,
+        type,beginTime,endTime,
+        unitPrice,createTime,updateTime,
+        isDelete,courtName
+    </sql>
+</mapper>
